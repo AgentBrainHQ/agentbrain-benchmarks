@@ -1,12 +1,11 @@
 # Agent Brain Benchmarks
 
-Public, reproducible benchmarks for [Agent Brain](https://agentbrain.ch) and
-comparisons to peer memory systems. Companion code to the paper
-[**Agent Brain: A Biologically Inspired Memory System for Autonomous AI Agents,
-with Head-to-Head Evaluation on LongMemEval**](https://doi.org/10.5281/zenodo.19673133)
-(Sritharan, 2026).
+Public, reproducible benchmarks for [Agent Brain](https://agentbrain.ch).
+Companion code to the paper
+[**Agent Brain: A Biologically Inspired Memory System for Autonomous AI Agents — LongMemEval-M Evaluation**](https://doi.org/10.5281/zenodo.19673132)
+(Sritharan, 2026, v3).
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19673133.svg)](https://doi.org/10.5281/zenodo.19673133)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19673132.svg)](https://doi.org/10.5281/zenodo.19673132)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
@@ -23,7 +22,7 @@ with Head-to-Head Evaluation on LongMemEval**](https://doi.org/10.5281/zenodo.19
 
 We report transparently a 1.9 pp regression when the Dream Cycle is
 enabled, and a 2.2 pp gap versus our own pgvector-only control. See
-[§15.4 of the paper](https://doi.org/10.5281/zenodo.19673133) for discussion.
+[§15.4 of the paper](https://doi.org/10.5281/zenodo.19673132) for discussion.
 
 Aggregated per-run numbers: [`results/SUMMARY.md`](results/SUMMARY.md).
 
@@ -202,17 +201,19 @@ and §15.5 of the paper.
 ```bibtex
 @techreport{sritharan2026agentbrain,
   title   = {Agent Brain: A Biologically Inspired Memory System for Autonomous
-             AI Agents, with Head-to-Head Evaluation on LongMemEval},
+             AI Agents --- LongMemEval-M Evaluation},
   author  = {Sritharan, Theshoth},
   year    = {2026},
   month   = {4},
   address = {Sachseln OW, Switzerland},
   institution = {Valtis},
-  doi     = {10.5281/zenodo.19673133},
-  url     = {https://doi.org/10.5281/zenodo.19673133},
-  note    = {Version 2}
+  doi     = {10.5281/zenodo.19673132},
+  url     = {https://doi.org/10.5281/zenodo.19673132},
+  note    = {Version 3 (current); Concept DOI resolves to the latest version.}
 }
 ```
+
+*The DOI above is the **Concept DOI** which always resolves to the latest version. To cite a specific version: v3 is `10.5281/zenodo.19673331`; v2 (superseded) is `10.5281/zenodo.19673133`.*
 
 Or use the [`CITATION.cff`](CITATION.cff) file directly (GitHub renders a
 "Cite this repository" button).

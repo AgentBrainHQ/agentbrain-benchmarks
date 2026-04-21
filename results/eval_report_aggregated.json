@@ -65,5 +65,7 @@
     "Raw per-query hypotheses not committed — see results/SUMMARY.md for rationale."
   ],
   "methodology_reference": "docs/METHODOLOGY.md",
-  "paper_doi": "10.5281/zenodo.19673133"
+  "paper_doi_concept": "10.5281/zenodo.19673132",
+  "paper_doi_current_version": "10.5281/zenodo.19673331",
+  "paper_version": "v3 (21 April 2026)"
 }

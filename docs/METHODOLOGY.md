@@ -2,7 +2,7 @@
 
 This document details the ingestion, retrieval, and judging procedures used
 for the LongMemEval benchmark reported in the paper
-([DOI: 10.5281/zenodo.19673133](https://doi.org/10.5281/zenodo.19673133)).
+([DOI: 10.5281/zenodo.19673132](https://doi.org/10.5281/zenodo.19673132), Concept DOI resolving to latest version).
 
 ## 1. Dataset
 

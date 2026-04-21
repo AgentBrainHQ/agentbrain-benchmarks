@@ -1,7 +1,7 @@
 # Results Summary
 
 Aggregated verdict counts from the runs reported in the paper
-([DOI: 10.5281/zenodo.19673133](https://doi.org/10.5281/zenodo.19673133)).
+([DOI: 10.5281/zenodo.19673132](https://doi.org/10.5281/zenodo.19673132), Concept DOI — currently resolves to v3).
 
 ## LongMemEval-m-cleaned — 500 queries, GPT-4o judge
 

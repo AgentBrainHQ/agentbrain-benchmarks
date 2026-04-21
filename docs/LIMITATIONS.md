@@ -109,4 +109,4 @@ paper. If you work on memory benchmarks, please reach out.
 
 **See also:** [`METHODOLOGY.md`](METHODOLOGY.md),
 [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md), and §15 of the
-[paper](https://doi.org/10.5281/zenodo.19673133).
+[paper](https://doi.org/10.5281/zenodo.19673132).

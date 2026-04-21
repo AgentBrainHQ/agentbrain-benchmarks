@@ -6,25 +6,29 @@ abstract: >
   ingestion scripts, retrieval variants (Brain with Dream Cycle, Brain without
   consolidation, pgvector-only baseline), and GPT-4o judge. Companion code to
   the paper "Agent Brain: A Biologically Inspired Memory System for Autonomous
-  AI Agents, with Head-to-Head Evaluation on LongMemEval".
+  AI Agents — LongMemEval-M Evaluation".
 authors:
   - family-names: "Sritharan"
     given-names: "Theshoth"
     affiliation: "Valtis, Sachseln OW, Switzerland"
     orcid: "https://orcid.org/0009-0006-4400-3352"
     email: "t.sritharan@valtis.ch"
-version: "1.0.0"
+version: "1.1.0"
 date-released: "2026-04-21"
 license: MIT
 repository-code: "https://github.com/AgentBrainHQ/agentbrain-benchmarks"
 url: "https://agentbrain.ch"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.19673133"
-    description: "Companion paper (Zenodo)"
+    value: "10.5281/zenodo.19673132"
+    description: "Companion paper (Concept DOI — resolves to latest version)"
+  - type: doi
+    value: "10.5281/zenodo.19673331"
+    description: "Companion paper, version 3 (current)"
 keywords:
   - "AI Agent Memory"
   - "LongMemEval"
+  - "LongMemEval-M"
   - "Memory Systems Benchmark"
   - "FSRS"
   - "Dream Cycle"
@@ -33,7 +37,7 @@ keywords:
   - "Knowledge Graph"
 preferred-citation:
   type: report
-  title: "Agent Brain: A Biologically Inspired Memory System for Autonomous AI Agents, with Head-to-Head Evaluation on LongMemEval"
+  title: "Agent Brain: A Biologically Inspired Memory System for Autonomous AI Agents — LongMemEval-M Evaluation"
   authors:
     - family-names: "Sritharan"
       given-names: "Theshoth"
@@ -44,6 +48,6 @@ preferred-citation:
   institution:
     name: "Valtis"
     address: "Sachseln OW, Switzerland"
-  doi: "10.5281/zenodo.19673133"
-  url: "https://doi.org/10.5281/zenodo.19673133"
-  notes: "Version 2 (April 2026) adds §15 LongMemEval head-to-head benchmark."
+  doi: "10.5281/zenodo.19673132"
+  url: "https://doi.org/10.5281/zenodo.19673132"
+  notes: "Version 3 (21 April 2026) corrects cross-system comparisons from v1/v2. The Concept DOI 10.5281/zenodo.19673132 resolves to the latest version. Specific versions: v3 = 10.5281/zenodo.19673331, v2 (superseded) = 10.5281/zenodo.19673133."
