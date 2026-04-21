@@ -47,16 +47,25 @@ full Brain pipeline on this quiz-style benchmark.
 ## Cross-system comparison — important caveat
 
 **The published numbers we originally cited for Zep, Mem0, LangMem, and
-OpenAI Memory are on the `LongMemEval-S` (Small) variant, while this work
-uses `LongMemEval-M` (`m-cleaned`). They are therefore not directly
-comparable.** An apples-to-apples comparison requires re-running each system
-on `weaviate/longmemeval-m-cleaned` under identical judging conditions — we
-have not done this for competing systems.
+OpenAI Memory are on the `LongMemEval-S` (Small) variant or from
+third-party 2024 evaluations, while this work uses `LongMemEval-M`
+(`m-cleaned`). They are therefore not directly comparable.**
 
-Additionally, Mem0 released a v2 update (~17 April 2026) reporting
-substantially higher accuracy (~92% on LongMemEval, variant not fully
-specified in the public posting at time of writing). Any comparison with
-Mem0 should use its current version, not older 2024 numbers.
+Specific corrections:
+
+- **Zep:** the `63.8%` we cited in preprint v1/v2 is the baseline row of
+  Rasmussen et al. 2025 Table 2, not Zep itself. Zep's own reported
+  accuracy on LongMemEval-S with gpt-4o-mini is **71.2%**.
+- **Mem0:** Mem0's v1 evaluation focus was LoCoMo, not LongMemEval. The
+  `49%` number reflected third-party 2024 evaluations. **Mem0 v2**
+  (released ~17 April 2026) reports **~92%** on LongMemEval (variant not
+  fully specified in the public posting at time of writing).
+- **LangMem / OpenAI Memory:** published numbers we cited are on
+  LongMemEval-S; we did not re-evaluate them on `m-cleaned`.
+
+An apples-to-apples comparison requires re-running each system on
+`weaviate/longmemeval-m-cleaned` under identical judging conditions — we
+have not done this for competing systems.
 
 A corrected cross-system discussion is in preparation (paper v3). For now,
 please treat the number `71.7%` as a single-system self-report on a clearly

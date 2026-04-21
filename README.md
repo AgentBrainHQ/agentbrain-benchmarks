@@ -27,16 +27,31 @@ enabled, and a 2.2 pp gap versus our own pgvector-only control. See
 
 Aggregated per-run numbers: [`results/SUMMARY.md`](results/SUMMARY.md).
 
-> **Note on cross-system comparisons (April 2026).** Published numbers from
-> Zep, Mem0, LangMem, and OpenAI Memory are mostly reported on the
-> `LongMemEval-S` (Small) variant, while this work uses `LongMemEval-M`
-> (Medium, `m-cleaned`). We initially compared numerically across variants in
-> earlier preprint versions; a corrected discussion is in preparation (paper
-> v3). For an apples-to-apples comparison we recommend re-evaluating each
-> system on `weaviate/longmemeval-m-cleaned` using the same judging rubric.
-> We also note that Mem0 released a substantially improved v2 around
-> 17 April 2026 (~92% reported, variant unclear) which post-dates the
-> writing of v1 but should inform any future comparison.
+> **Important caveat on cross-system comparisons (April 2026).**
+>
+> To the best of our knowledge we are the first to publish numbers
+> specifically on the `weaviate/longmemeval-m-cleaned` variant, so no
+> strict apples-to-apples peer comparison exists yet.
+>
+> Published peer numbers from Zep, Mem0, LangMem, and OpenAI Memory that we
+> cited in earlier preprint versions refer to the **`LongMemEval-S`**
+> (Small) variant or to third-party evaluations, not to `LongMemEval-M`.
+> They are therefore **not directly comparable** to our 71.7% figure. In
+> particular:
+>
+> - The `63.8%` number we cited for Zep in preprint v1/v2 is the
+>   baseline row of Rasmussen et al. 2025 Table 2 (full-context
+>   gpt-4o-mini), **not** Zep itself. Zep's own reported score on
+>   LongMemEval-S with gpt-4o-mini is **71.2%**.
+> - The `49%` number we cited for Mem0 originated in third-party evaluations
+>   from 2024 when Mem0 had not yet published official LongMemEval numbers
+>   (their own benchmark focus at the time was LoCoMo). **Mem0 v2**
+>   (released ~17 April 2026) reports **~92%** on LongMemEval; our paper
+>   v2 (21 April 2026) did not yet reflect this — corrected in v3.
+>
+> The cleanest way to compare systems on this variant is to re-evaluate
+> each under identical judging conditions on `m-cleaned`. We welcome PRs
+> in this repo adding such runs.
 
 ---
 
