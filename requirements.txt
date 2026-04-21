@@ -1,0 +1,16 @@
+# Agent Brain Benchmarks — pinned for reproducibility.
+# Tested with Python 3.10 / 3.11 / 3.12 on macOS (Apple Silicon) and Linux x86_64.
+
+aiohttp==3.9.5
+requests==2.32.3
+
+# Local embeddings (deterministic, no API cost)
+sentence-transformers==2.7.0
+torch>=2.0.0,<3.0.0
+
+# Dataset loading (parquet path)
+pyarrow==15.0.2
+pandas==2.2.2
+
+# Numerics
+numpy>=1.24.0,<2.0.0

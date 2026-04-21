@@ -1,0 +1,54 @@
+# Secrets
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Data (we don't redistribute LongMemEval raw content)
+data/
+*.jsonl
+*.parquet
+
+# Results we regenerate locally
+results/brain_output.jsonl
+results/baseline_output.jsonl
+results/eval_report.json
+results/*_debug.json
+results/*.log
+
+# Database dumps — never commit
+*.dump
+*.sql.gz
+
+# Workspace state
+data/workspaces.json
+
+# Logs
+*.log
+logs/
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Downloaded models
+~/.cache/huggingface/
+models/

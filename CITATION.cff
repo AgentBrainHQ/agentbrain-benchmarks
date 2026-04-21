@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use this benchmark or the accompanying paper, please cite as below."
+title: "Agent Brain Benchmarks"
+abstract: >
+  Public, reproducible evaluation code for Agent Brain on LongMemEval, including
+  ingestion scripts, retrieval variants (Brain with Dream Cycle, Brain without
+  consolidation, pgvector-only baseline), and GPT-4o judge. Companion code to
+  the paper "Agent Brain: A Biologically Inspired Memory System for Autonomous
+  AI Agents, with Head-to-Head Evaluation on LongMemEval".
+authors:
+  - family-names: "Sritharan"
+    given-names: "Theshoth"
+    affiliation: "Valtis, Sachseln OW, Switzerland"
+    orcid: "https://orcid.org/0009-0006-4400-3352"
+    email: "t.sritharan@valtis.ch"
+version: "1.0.0"
+date-released: "2026-04-21"
+license: MIT
+repository-code: "https://github.com/AgentBrainHQ/agentbrain-benchmarks"
+url: "https://agentbrain.ch"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.19673133"
+    description: "Companion paper (Zenodo)"
+keywords:
+  - "AI Agent Memory"
+  - "LongMemEval"
+  - "Memory Systems Benchmark"
+  - "FSRS"
+  - "Dream Cycle"
+  - "Hybrid Search"
+  - "Reciprocal Rank Fusion"
+  - "Knowledge Graph"
+preferred-citation:
+  type: report
+  title: "Agent Brain: A Biologically Inspired Memory System for Autonomous AI Agents, with Head-to-Head Evaluation on LongMemEval"
+  authors:
+    - family-names: "Sritharan"
+      given-names: "Theshoth"
+      affiliation: "Valtis, Sachseln OW, Switzerland"
+      orcid: "https://orcid.org/0009-0006-4400-3352"
+  year: 2026
+  month: 4
+  institution:
+    name: "Valtis"
+    address: "Sachseln OW, Switzerland"
+  doi: "10.5281/zenodo.19673133"
+  url: "https://doi.org/10.5281/zenodo.19673133"
+  notes: "Version 2 (April 2026) adds §15 LongMemEval head-to-head benchmark."

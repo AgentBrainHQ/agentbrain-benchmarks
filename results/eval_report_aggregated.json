@@ -1,0 +1,70 @@
+{
+  "runs": [
+    {
+      "system": "agent_brain_test_0",
+      "description": "Brain without Dream Cycle consolidation; direct-Supabase ingest; Brain recall retrieval",
+      "timestamp": "2026-04-16",
+      "total_queries": 500,
+      "accuracy": 71.7,
+      "accuracy_with_partial": 74.2,
+      "notes": "Headline numbers from the paper. Per-verdict breakdown not re-extracted from this run log; see per-query verdicts in Test 1 for structure."
+    },
+    {
+      "system": "agent_brain_test_1",
+      "description": "Brain with Dream Cycle enabled (5 phases); Brain-API ingest; Brain recall retrieval",
+      "timestamp": "2026-04-17T02:27:52Z",
+      "total_queries": 500,
+      "counts": {
+        "CORRECT": 349,
+        "PARTIAL": 29,
+        "WRONG": 122,
+        "ABSTAIN_CORRECT": 0,
+        "ERROR": 0
+      },
+      "accuracy": 69.8,
+      "accuracy_with_partial": 72.7,
+      "notes": "Complete verdict breakdown from eval_report.json of this run."
+    },
+    {
+      "system": "baseline_pgvector_run_1",
+      "description": "pgvector cosine top-10 only, no entity extraction, no hybrid, no Dream Cycle",
+      "timestamp": "2026-04-16",
+      "total_queries": 500,
+      "accuracy": 73.9,
+      "notes": "Headline number from the paper. Per-verdict breakdown not re-extracted."
+    },
+    {
+      "system": "baseline_pgvector_run_2",
+      "description": "pgvector cosine top-10 only, no entity extraction, no hybrid, no Dream Cycle",
+      "timestamp": "2026-04-17T02:27:52Z",
+      "total_queries": 500,
+      "counts": {
+        "CORRECT": 361,
+        "PARTIAL": 20,
+        "WRONG": 119,
+        "ABSTAIN_CORRECT": 0,
+        "ERROR": 0
+      },
+      "accuracy": 72.2,
+      "accuracy_with_partial": 74.2,
+      "notes": "Complete verdict breakdown from eval_report.json of this run."
+    }
+  ],
+  "deltas": {
+    "brain_test_0_vs_zep_public": 7.9,
+    "brain_test_0_vs_mem0_public": 22.7,
+    "brain_test_1_vs_baseline_run_2": -2.4,
+    "brain_test_0_vs_baseline_run_1": -2.2
+  },
+  "metric_definitions": {
+    "accuracy": "(CORRECT + ABSTAIN_CORRECT) / total",
+    "accuracy_with_partial": "(CORRECT + ABSTAIN_CORRECT + 0.5 * PARTIAL) / total"
+  },
+  "notes": [
+    "Per-run variance of ~1 pp is normal due to non-determinism of GPT-4o at temperature=0.",
+    "Only Test 1 and Baseline run 2 carry complete per-verdict breakdowns in this summary; Test 0 and Baseline run 1 report only the headline accuracy from the paper. The complete raw eval_report.json for those earlier runs is archived but not redistributed (contains verbatim LongMemEval content).",
+    "Raw per-query hypotheses not committed — see results/SUMMARY.md for rationale."
+  ],
+  "methodology_reference": "docs/METHODOLOGY.md",
+  "paper_doi": "10.5281/zenodo.19673133"
+}
