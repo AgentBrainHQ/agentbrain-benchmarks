@@ -15,23 +15,28 @@ with Head-to-Head Evaluation on LongMemEval**](https://doi.org/10.5281/zenodo.19
 
 500 QA pairs across 510 multi-turn workspaces, GPT-4o judge.
 
-| System | Accuracy | Reproducible here | Source |
-|---|:---:|:---:|---|
-| **Agent Brain — Test 0 (no consolidation)** | **71.7%** | Yes | This work |
-| Agent Brain — Test 1 (with Dream Cycle) | 69.8% | Yes | This work |
-| Baseline pgvector (our control) | 72.2% – 73.9% | Yes | This work |
-| Zep (published) | 63.8% | No (closed source) | Rasmussen et al., 2025 |
-| Mem0 (published) | 49.0% | Partial | Chhikara et al., 2024 |
-| LangMem (published) | 47.1% | — | LangChain AI, 2025 |
-| OpenAI Memory (published) | 40.2% | — | OpenAI, 2024 |
+| Configuration | Accuracy | Reproducible here |
+|---|:---:|:---:|
+| **Agent Brain — Test 0 (no consolidation)** | **71.7%** | Yes |
+| Agent Brain — Test 1 (with Dream Cycle) | 69.8% | Yes |
+| Baseline pgvector (our control) | 72.2% – 73.9% | Yes |
 
-**Agent Brain outperforms the next-best public result (Zep) by 7.9 percentage points.**
-
-We also report transparently a 1.9 pp regression when the Dream Cycle is
+We report transparently a 1.9 pp regression when the Dream Cycle is
 enabled, and a 2.2 pp gap versus our own pgvector-only control. See
 [§15.4 of the paper](https://doi.org/10.5281/zenodo.19673133) for discussion.
 
 Aggregated per-run numbers: [`results/SUMMARY.md`](results/SUMMARY.md).
+
+> **Note on cross-system comparisons (April 2026).** Published numbers from
+> Zep, Mem0, LangMem, and OpenAI Memory are mostly reported on the
+> `LongMemEval-S` (Small) variant, while this work uses `LongMemEval-M`
+> (Medium, `m-cleaned`). We initially compared numerically across variants in
+> earlier preprint versions; a corrected discussion is in preparation (paper
+> v3). For an apples-to-apples comparison we recommend re-evaluating each
+> system on `weaviate/longmemeval-m-cleaned` using the same judging rubric.
+> We also note that Mem0 released a substantially improved v2 around
+> 17 April 2026 (~92% reported, variant unclear) which post-dates the
+> writing of v1 but should inform any future comparison.
 
 ---
 

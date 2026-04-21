@@ -51,10 +51,9 @@
     }
   ],
   "deltas": {
-    "brain_test_0_vs_zep_public": 7.9,
-    "brain_test_0_vs_mem0_public": 22.7,
     "brain_test_1_vs_baseline_run_2": -2.4,
-    "brain_test_0_vs_baseline_run_1": -2.2
+    "brain_test_0_vs_baseline_run_1": -2.2,
+    "_note": "Cross-system deltas (vs Zep/Mem0) removed: published competitor numbers are on LongMemEval-S, we measure on LongMemEval-M (m-cleaned). Not directly comparable. See results/SUMMARY.md."
   },
   "metric_definitions": {
     "accuracy": "(CORRECT + ABSTAIN_CORRECT) / total",

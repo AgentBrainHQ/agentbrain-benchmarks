@@ -1,7 +1,7 @@
 # Limitations of LongMemEval as a Memory Benchmark
 
 This document accompanies §15.5 of the paper and argues — from inside a
-memory-systems team that just posted state-of-the-art on this benchmark —
+memory-systems team publishing a result on this benchmark —
 why LongMemEval is **necessary but not sufficient** for evaluating agent
 memory systems.
 
@@ -85,21 +85,25 @@ paper. If you work on memory benchmarks, please reach out.
 
 ## Why we still published a LongMemEval result
 
-- It is the **only public head-to-head** benchmark with numbers for Zep,
-  Mem0, LangMem, and OpenAI Memory. Not publishing would be silent about
-  how we compare.
-- We **win** on it despite the limitations above — 7.9 pp over the
-  next-best (Zep).
-- Transparency about our weaknesses on this specific benchmark is more
-  credible than silence would be.
+- It is the best-known public benchmark for memory-agent systems, so
+  measuring on it anchors future comparisons.
+- The number `71.7%` on `LongMemEval-M-cleaned` is what our system actually
+  produces on a clearly specified dataset variant — we prefer to publish it,
+  including the Dream Cycle regression, rather than stay silent.
+- **We do not claim state-of-the-art.** Published peer numbers are on the
+  `LongMemEval-S` variant, so cross-system deltas in earlier versions of
+  this paper were not apples-to-apples. Mem0's v2 release (April 2026)
+  reports substantially higher accuracy than our result. A corrected
+  discussion is in paper v3.
 
 ## Bottom line
 
-> Brain outperforms all publicly evaluated competitors on the benchmark
-> that exists today, while being purpose-built for a larger class of
-> workloads that no public benchmark currently measures.
-
-(§15.5, final paragraph.)
+> On `weaviate/longmemeval-m-cleaned` our system achieves 71.7% accuracy.
+> It is optimized for long-running production workloads — cross-session
+> continuity, relational reasoning, temporal reasoning — rather than
+> quiz-style factual recall. We publish the number transparently so that
+> future systems can be compared on the same variant under the same
+> judging rubric.
 
 ---
 

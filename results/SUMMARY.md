@@ -44,15 +44,24 @@ Aggregated verdict counts from the runs reported in the paper
 See §15.4 of the paper for discussion of why the baseline outperforms the
 full Brain pipeline on this quiz-style benchmark.
 
-## Head-to-head against published memory systems
+## Cross-system comparison — important caveat
 
-| System | LongMemEval-m accuracy | Source |
-|---|:---:|---|
-| **Agent Brain (ours, Test 0)** | **71.7%** | This work |
-| Zep | 63.8% | Rasmussen et al., 2025 (arXiv:2501.13956) |
-| Mem0 | 49.0% | Chhikara et al., 2024 (arXiv:2408.03243) |
-| LangMem | 47.1% | LangChain AI, 2025 |
-| OpenAI Memory | 40.2% | OpenAI, 2024 |
+**The published numbers we originally cited for Zep, Mem0, LangMem, and
+OpenAI Memory are on the `LongMemEval-S` (Small) variant, while this work
+uses `LongMemEval-M` (`m-cleaned`). They are therefore not directly
+comparable.** An apples-to-apples comparison requires re-running each system
+on `weaviate/longmemeval-m-cleaned` under identical judging conditions — we
+have not done this for competing systems.
+
+Additionally, Mem0 released a v2 update (~17 April 2026) reporting
+substantially higher accuracy (~92% on LongMemEval, variant not fully
+specified in the public posting at time of writing). Any comparison with
+Mem0 should use its current version, not older 2024 numbers.
+
+A corrected cross-system discussion is in preparation (paper v3). For now,
+please treat the number `71.7%` as a single-system self-report on a clearly
+specified dataset variant, and re-benchmark competing systems on the same
+variant before drawing conclusions.
 
 ## Reproducing
 
